@@ -3,7 +3,6 @@ mrtp <- function(begin,end,location){
   setwd(location) 
   out_ <- list()
   in_  <- list()
-  
   for(i in begin:end){
     if(i %% 100 < 13 & i %% 100 > 0){
       url  <- paste0("https://web.metro.taipei/RidershipPerStation/", i, "_cht.ods")
