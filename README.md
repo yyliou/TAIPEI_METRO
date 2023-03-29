@@ -17,7 +17,8 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 ## Codebook
 
-`date` date //
+`date` date
+
 `station_name` name of station //
 `flow` flow in/out of station every day //
 `type` if the flow type is "out" then = 1, else = 2 //
