@@ -36,6 +36,6 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 `day` day of date
 
-`week` if Monday = 1, if Tuesday = 2,...
+`week` if Monday = 1, if Tuesday = 2, ...
 
 `weekend` if weekend = 1, else = 0
