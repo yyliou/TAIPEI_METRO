@@ -10,7 +10,6 @@ library("magrittr")
 b <- mrtp(begin    = 202101,
           end      = 202212,
           location = "/Users/oliverliou/Desktop")
-b <- b[b$date == "2022-09-03",]
 
 # plotting
 plot(b, out = T)
