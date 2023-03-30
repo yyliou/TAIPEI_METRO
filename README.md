@@ -6,16 +6,25 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 ## Syntax
 
-`data <- mrtp(begin,end,location)`
+`mrtp(begin,end,location)`
 
 * `begin` begin date
 * `end` ending date
 * `location` the file we want to store the data
 
-`plot(data, out = T)`
+`plot(object, out = T)`
 
-* `data` data we use (yyyy-mm-dd)
+* `object` data obtained from `mrtp`
 * `out` we want to plot "out flow" or not
+
+`td(object)`
+
+* `object` data obtained from `mrtp`
+
+`pd(object, proportion)`
+
+* `object` data obtained from `td`
+* `proportion` the proportion we want to train
 
 ## Codebook
 
