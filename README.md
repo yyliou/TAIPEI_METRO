@@ -12,10 +12,9 @@ I provide a R script designed to automatically extract in/out flow data for each
 * `end` ending date
 * `location` the file we want to store the data
 
-`plot(object, out = T)`
+`plot(object)`
 
 * `object` data obtained from `mrtp`
-* `out` we want to plot "out flow" or not
 
 `td(object)`
 
