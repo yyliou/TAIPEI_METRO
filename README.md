@@ -24,7 +24,7 @@ I provide a R script designed to automatically extract in/out flow data for each
 `pd(object, proportion)`
 
 * `object` data obtained from `td`
-* `proportion` the proportion we want to train
+* `proportion` the proportion of the data that we use to train the forecasting model
 
 ## Codebook
 
