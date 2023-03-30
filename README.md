@@ -16,13 +16,13 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 `plot(data, out = T)`
 
-`data` data we use
+`data` data we use (yyyy-mm-dd)
 
 `out` we want to plot "out flow" or not
 
 ## Codebook
 
-`date` date
+`date` date (yyyy-mm-dd)
 
 `station_name` name of station
 
@@ -30,11 +30,11 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 `type` if the flow type is "out" then = 1, else = 2
 
-`year` year of date
+`year` year of date (yyyy)
 
-`month` month of date
+`month` month of date (mm)
 
-`day` day of date
+`day` day of date (dd)
 
 `week` if Monday = 1, if Tuesday = 2, ...
 
