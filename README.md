@@ -8,17 +8,17 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 `data <- mrtp(begin,end,location)`
 
-`begin` begin date
+* `begin` begin date
 
-`end` ending date
+* `end` ending date
 
-`location` the file we want to store the data
+* `location` the file we want to store the data
 
 `plot(data, out = T)`
 
-`data` data we use (yyyy-mm-dd)
+* `data` data we use (yyyy-mm-dd)
 
-`out` we want to plot "out flow" or not
+* `out` we want to plot "out flow" or not
 
 ## Codebook
 
