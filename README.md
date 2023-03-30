@@ -9,7 +9,6 @@ I provide a R script designed to automatically extract in/out flow data for each
 `data <- mrtp(begin,end,location)`
 
 * `begin` begin date
-
 * `end` ending date
 
 * `location` the file we want to store the data
@@ -22,20 +21,20 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 ## Codebook
 
-`date` date (yyyy-mm-dd)
+* `date` date (yyyy-mm-dd)
 
-`station_name` name of station
+* `station_name` name of station
 
-`flow` flow in/out of station every day
+* `flow` flow in/out of station every day
 
-`type` if the flow type is "out" then = 1, else = 2
+* `type` if the flow type is "out" then = 1, else = 2
 
-`year` year of date (yyyy)
+* `year` year of date (yyyy)
 
-`month` month of date (mm)
+* `month` month of date (mm)
 
-`day` day of date (dd)
+* `day` day of date (dd)
 
-`week` if Monday = 1, if Tuesday = 2, ...
+* `week` if Monday = 1, if Tuesday = 2, ...
 
-`weekend` if weekend = 1, else = 0
+* `weekend` if weekend = 1, else = 0
