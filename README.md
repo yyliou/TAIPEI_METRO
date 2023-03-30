@@ -20,7 +20,7 @@ I provide a R script designed to automatically extract in/out flow data for each
 
 * `object` data obtained from `mrtp`
 
-`pd(object, proportion)`
+`pd(object,proportion)`
 
 * `object` data obtained from `td`
 * `proportion` the proportion of the data that we use to train the forecasting model
