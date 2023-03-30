@@ -42,15 +42,16 @@ mrtp <- function(begin,end,location){
 }
 
 # 2. plotting from 1
-plot <- function(object,out = T){
-  if(out == T){t = 1} 
-  if(out == F){t = 2}
-  g <- object[object$type == t]  %>% 
+plot <- function(object){
+  g <- object[object$type == 2]  %>% 
     dplyr::group_by(year,month) %>%
-    dplyr::summarise(flow = sum(flow, na.rm = TRUE))
+    dplyr::summarise(flow = sum(flow, na.rm = T)/1000000)
   ggplot2::ggplot(g,ggplot2::aes(x = month, y = flow)) + 
     ggplot2::geom_line(ggplot2::aes(color = as.character(year))) +
-    ggplot2::scale_x_continuous(breaks = seq(1, 12, 1))
+    ggplot2::scale_x_continuous(breaks = seq(1, 12, 1)) + 
+    ggplot2::labs(color='Year') +
+    ggplot2::ylab("Flow (Million)") +
+    ggplot2::xlab("Month")
 }
 
 # 3. transfer to a time series data from 1
