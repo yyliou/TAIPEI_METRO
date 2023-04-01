@@ -62,24 +62,29 @@ td <- function(object){
 }
 
 # 4. forecasting from 3
-pd <- function(object, porportion){
+pd <- function(object, porportion = .9){
   object$N <- c(1:length(object$flow))
-  object$year <- factor(lubridate::year(object$date))
-  object$month <- factor(lubridate::month(object$date))
-  object$day <- factor(lubridate::day(object$date))
-  object$season <- factor(hydroTSM::time2season(object$date, out.fmt = "seasons"))
+  object$year <- lubridate::year(object$date)
+  object$month <- lubridate::month(object$date)
   object$week <- lubridate::wday(object$date)
-  object$weekend[object$week < 7 & object$week > 1 ] <- 0
-  object$weekend[object$week == 1 | object$week == 7] <- 1
-  object$week <- factor(object$week)
+  object$day <- lubridate::day(object$date)
+  object$weekend <- ifelse(object$week==1|object$week==7, 1, 0)
+  object$year <- factor(object$year)
+  object$month <- factor(object$month)  
+  object$week <- factor(object$week)  
+  object$day <- factor(object$day)  
+  object$season <- factor(hydroTSM::time2season(object$date, out.fmt = "seasons"))
   train <- object[object$N < length(object$flow)*porportion,]
-  model <- lm(flow ~ N + year + season + month + week + weekend + day, data = train)
+  model <- lm(flow ~ N + season + month + weekend + day, data = train)
+  summary(model)
+  R2 <- paste0("ex-ante R2 =",round(summary(model)$r.squared,3))
   object$pred <- predict(model, newdata = object)
-  ggplot2::ggplot(object, aes(x = date)) +
-    geom_line(aes(y = flow), color = "black") + 
-    geom_line(aes(y = pred), color = "darkred") +
+  ggplot2::ggplot(object, ggplot2::aes(x=date)) +
+    geom_line(ggplot2::aes(y = flow), color = "black") + 
+    geom_line(ggplot2::aes(y = pred), color="darkred") +
     ggplot2::xlab("Time") +
     ggplot2::ylab("Flow (Million)") + 
-    geom_vline(xintercept = as.numeric(max(train$date)),
-               linetype = "dotted", color = "darkblue", size = .5) 
+    ggplot2::geom_vline(xintercept = as.numeric(max(train$date)),
+               linetype="dotted", color = "darkblue", size=.5) +
+    ggplot2::labs(caption = R2)
 }
