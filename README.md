@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I provide a R script designed to automatically extract in/out flow data for each station of the Taipei Rapid Transit Corporation network from open resources. The script serves to optimize data collection and facilitate data analysis for decision-making purposes.
+I provide an R script designed to automatically extract in/out flow data for each station of the Taipei Rapid Transit Corporation network from open resources. The script serves to optimize data collection and facilitate data analysis.
 
 * `function.R` contains the functions I build
 * `example.R` contains the required pkgs and some examples
