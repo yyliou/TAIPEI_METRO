@@ -11,7 +11,7 @@ library("hydroTSM")
 b <- mrtp(begin = 202101, end = 202212, location = "/Users/oliverliou/Desktop")
 
 # plotting
-plot(b, out = T)
+plot(b)
 
 # generate a time series data
 c <- td(b)
