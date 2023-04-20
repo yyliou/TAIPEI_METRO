@@ -39,3 +39,19 @@ I provide an R script designed to automatically extract in/out flow data for eac
 * `day` day of date (dd)
 * `week` if Monday = 1, if Tuesday = 2, ...
 * `weekend` if weekend = 1, else = 0
+* `main_trans` if passengers can transfer to another main line = 1, else = 0
+* `branch_trans` if passengers can transfer to a branch line = 1, else = 0
+* `branch` if the station is located on a branch line = 1, else = 0
+* `air` if the station is connected to airport = 1, else = 0
+* `air_mrt` if passengers can transfer to airport line= 1, else = 0
+* `hot` if hot spring is available = 1, else = 0
+* `ny` if new year = 1, else = 0
+* `cny` if chinese new year = 1, else = 0
+* `lrt` if passengers can transfer to LRT = 1, else = 0
+* `gondo` if passengers can transfer to gondola = 1, else = 0
+* `node` if the station is terminal = 1, else = 0
+* `rail` if passengers can transfer to TRA = 1, else = 0
+* `high` if passengers can transfer to THR = 1, else = 0
+* `ticket` if 1280 ticket is available = 1, else = 0
+* `covid_2` if the COVID stauts is 2 = 1, else = 0
+* `covid_3` if the COVID stauts is 3 = 1, else = 0
